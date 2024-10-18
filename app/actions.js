@@ -33,7 +33,7 @@ export const signUpAction = async (formData) => {
     return encodedRedirect("error", "/sign-up", error.message);
   } else {
     // return redirect("/protected");
-    return encodedRedirect("success", "/protected", "Thanks for signing up!");
+    return encodedRedirect("success", "/", "Thanks for signing up!");
   }
 };
 
@@ -53,7 +53,7 @@ export const signInAction = async (formData) => {
     return encodedRedirect("error", "/sign-in", error.message);
   }
 
-  return redirect("/protected");
+  return redirect("/");
 };
 
 export const forgotPasswordAction = async (formData) => {
